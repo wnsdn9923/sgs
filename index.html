@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./src/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="src/logo_logo.png" alt="사이트 로고" class="site-logo" onclick="showIntroduction()">
+                <span onclick="showIntroduction()">YouTube</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><button onclick="showSection('section1', ['카리나', '윈터', '지젤', '닝닝'])">
+                        <img src="src/aespa_logo.png" alt="aespa 로고" class="group-logo"> aespa
+                    </button></li>
+                    <li><button onclick="showSection('section2', ['민지', '하니', '다니엘', '해린', '혜인'])">
+                        <img src="src/NewJeans_logo.png" alt="NewJeans 로고" class="group-logo"> NewJeans
+                    </button></li>
+                    <li><button onclick="showSection('section3', ['안유진', '가을', '레이', '장원영', '리즈', '이서'])">
+                        <img src="src/IVE_logo.png" alt="IVE 로고" class="group-logo"> IVE
+                    </button></li>
+                    <li><button onclick="showSection('section4', ['윤아', '민주', '모카', '원희', '이로하'])">
+                        <img src="src/ILLIT_logo.png" alt="ILLIT 로고" class="group-logo"> ILLIT
+                    </button></li>
+                    <li><button onclick="showSection('section5', ['김채원', '사쿠라', '허윤진', '카즈하', '홍은채'])">
+                        <img src="src/LE SSERAFIM_logo.png" alt="LE SSERAFIM 로고" class="group-logo"> LE SSERAFIM
+                    </button></li>
+                    <li><button onclick="showSection('section6', ['미연', '민니', '소연', '우기', '슈화'])">
+                        <img src="src/(G)I-DLE_logo.png" alt="(G)I-DLE 로고" class="group-logo"> (G)I-DLE
+                    </button></li>
+                </ul>
+            </nav>
+            <section class="tag-cloud" id="tag-cloud">
+                <span>Supernova</span>
+                <span>How Sweet</span>
+                <span>HEYA</span>
+                <span>Magnetic</span>
+                <span>Perfect Night</span>
+                <span>Fate</span>
+            </section>
+            <section class="search-bar">
+                <input type="text" id="search-input" placeholder="검색">
+                <button onclick="searchVideos()" class="search-button">
+                    <img src="src/search_icon.png" alt="검색">
+                </button>
+            </section>
+            <section class="search-results" id="search-results">
+                <!-- 검색 결과가 여기에 표시됩니다 -->
+            </section>           
+        </aside>
+        <section class="main-content" id="main-content">
+            <div id="introduction" class="content-section active">
+                <div id="youtube-videos" class="video-grid">
+                    <!-- YouTube 비디오가 여기에 표시됩니다 -->
+                </div>
+            </div>
+            <div id="section1" class="content-section">
+                <h2>aespa</h2>
+                <div class="video-grid">
+                    <a href="https://www.youtube.com/watch?v=2XXhpxBb9Zw" target="_blank" class="video-card">
+                        <img src="src/aespa_카리나.png" alt="aespa_카리나">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=CoJJHgj-79g" target="_blank" class="video-card">
+                        <img src="src/aespa_윈터.png" alt="aespa_윈터">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=eGwziRVUCIo" target="_blank" class="video-card">
+                        <img src="src/aespa_지젤.png" alt="aespa_지젤">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=d6GvADUYei0" target="_blank" class="video-card">
+                        <img src="src/aespa_닝닝.png" alt="aespa_닝닝">
+                    </a>
+                </div>
+            </div>
+            <div id="section2" class="content-section">
+                <h2>NewJeans</h2>
+                <div class="video-grid">
+                    <a href="https://www.youtube.com/watch?v=zK8FE25duM0" target="_blank" class="video-card">
+                        <img src="src/NewJeans_민지.png" alt="NewJeans_민지">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=fiq9KCPZdSs" target="_blank" class="video-card">
+                        <img src="src/NewJeans_하니.png" alt="NewJeans_하니">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=t4NwPbHjHmw" target="_blank" class="video-card">
+                        <img src="src/NewJeans_다니엘.png" alt="NewJeans_다니엘">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=Vb-8dASTUZ8" target="_blank" class="video-card">
+                        <img src="src/NewJeans_해린.png" alt="NewJeans_해린">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=Rg1hodZaM_M" target="_blank" class="video-card">
+                        <img src="src/NewJeans_혜인.png" alt="NewJeans_혜인">
+                    </a>
+                </div>
+            </div>
+            <div id="section3" class="content-section">
+                <h2>IVE</h2>
+                <div class="video-grid">
+                    <a href="https://www.youtube.com/watch?v=EaSYOIUPF9U" target="_blank" class="video-card">
+                        <img src="src/IVE_안유진.png" alt="IVE_안유진">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=yHG_JQ5Vl_s" target="_blank" class="video-card">
+                        <img src="src/IVE_가을.png" alt="IVE_가을">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=sODao4nzqBM" target="_blank" class="video-card">
+                        <img src="src/IVE_레이.png" alt="IVE_레이">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=MpCDQDD_PaQ" target="_blank" class="video-card">
+                        <img src="src/IVE_장원영.png" alt="IVE_장원영">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=KlBh73Hu1zA" target="_blank" class="video-card">
+                        <img src="src/IVE_리즈.png" alt="IVE_리즈">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=PdFzKqEiRSA" target="_blank" class="video-card">
+                        <img src="src/IVE_이서.png" alt="IVE_이서">
+                    </a>
+                </div>
+            </div>
+            <div id="section4" class="content-section">
+                <h2>ILLIT</h2>
+                <div class="video-grid">
+                    <a href="https://www.youtube.com/watch?v=Csx-Oe3Hj0w" target="_blank" class="video-card">
+                        <img src="src/ILLIT_윤아.png" alt="ILLIT_윤아">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=Vbp3PrJ_06g" target="_blank" class="video-card">
+                        <img src="src/ILLIT_민주.png" alt="ILLIT_민주">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=7T0YkGOABcw" target="_blank" class="video-card">
+                        <img src="src/ILLIT_모카.png" alt="ILLIT_모카">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=0gCPGPSwyLc" target="_blank" class="video-card">
+                        <img src="src/ILLIT_원희.png" alt="ILLIT_원희">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=WDt8GFy43T8" target="_blank" class="video-card">
+                        <img src="src/ILLIT_이로하.png" alt="ILLIT_이로하">
+                    </a>
+                </div>
+            </div>
+            <div id="section5" class="content-section">
+                <h2>LE SSERAFIM</h2>
+                <div class="video-grid">
+                    <a href="https://www.youtube.com/watch?v=9cQOgdMjwWQ" target="_blank" class="video-card">
+                        <img src="src/LE SSERAFIM_김채원.png" alt="LE SSERAFIM_김채원">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=7kenEHwBuQk" target="_blank" class="video-card">
+                        <img src="src/LE SSERAFIM_사쿠라.png" alt="LE SSERAFIM_사쿠라">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=U6uxWeYXutI" target="_blank" class="video-card">
+                        <img src="src/LE SSERAFIM_허윤진.png" alt="LE SSERAFIM_허윤진">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=JEZ0Jvm4f30" target="_blank" class="video-card">
+                        <img src="src/LE SSERAFIM_카즈하.png" alt="LE SSERAFIM_카즈하">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=ppIBQsYMqBQ" target="_blank" class="video-card">
+                        <img src="src/LE SSERAFIM_홍은채.png" alt="LE SSERAFIM_홍은채">
+                    </a>
+                </div>
+            </div>
+            <div id="section6" class="content-section">
+                <h2>(G)I-DLE</h2>
+                <div class="video-grid">
+                    <a href="https://www.youtube.com/watch?v=odTeZ8gjJm4" target="_blank" class="video-card">
+                        <img src="src/(G)I-DLE_미연.png" alt="(G)I-DLE_미연">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=H6C3DW30StA" target="_blank" class="video-card">
+                        <img src="src/(G)I-DLE_민니.png" alt="(G)I-DLE_민니">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=JZeFQYiHEOI" target="_blank" class="video-card">
+                        <img src="src/(G)I-DLE_소연.png" alt="(G)I-DLE_소연">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=VuQe65jscWU" target="_blank" class="video-card">
+                        <img src="src/(G)I-DLE_우기.png" alt="(G)I-DLE_우기">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=YD0aFgtyqWo" target="_blank" class="video-card">
+                        <img src="src/(G)I-DLE_슈화.png" alt="(G)I-DLE_슈화">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
